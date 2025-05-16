@@ -48,7 +48,7 @@ async function checkGoldenCross(symbol) {
 
     const avgVol = volumes.slice(-11, -1).reduce((a, b) => a + b, 0) / 10;
     const curVol = volumes[volumes.length - 1];
-    if (curVol < avgVol * 1.1) return null;
+    if (curVol < avgVol * 0.9) return null;
 
     return { symbol, trendStrength: curEMA5 - curEMA20 };
   } catch (err) {
