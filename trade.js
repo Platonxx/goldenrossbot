@@ -3,7 +3,7 @@ const axios = require('axios');
 const { EMA, RSI } = require('technicalindicators');
 
 const binance = new ccxt.binance({
-  apiKey: process.env.BINANCE_API-KEY,
+  apiKey: process.env.BINANCE_API_KEY,
   secret: process.env.BINANCE_SECRET,
   enableRateLimit: true,
 });
